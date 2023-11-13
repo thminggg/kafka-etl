@@ -1,0 +1,24 @@
+{
+  "name": "kafka-etl",
+  "version": "1.0.0",
+  "description": "### Create Topic",
+  "main": "producer.js",
+  "scripts": {
+    "produce": "node ./src/producer.js",
+    "consume": "node ./src/consumer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conduktor/kafka-stack-docker-compose.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conduktor/kafka-stack-docker-compose/issues"
+  },
+  "homepage": "https://github.com/conduktor/kafka-stack-docker-compose#readme",
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  }
+}
