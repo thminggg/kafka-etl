@@ -4,8 +4,12 @@
   "description": "### Create Topic",
   "main": "producer.js",
   "scripts": {
-    "produce": "node ./src/producer.js",
-    "consume": "node ./src/consumer.js"
+    "clean": "rm -rf dist",
+    "compile": "yarn run clean && tsc",
+    "kafka": "docker compose -f docker-compose.yml up -d",
+    "topic:create": "node ./dist/create-topic.js",
+    "produce": "node ./dist/producer.js",
+    "consume": "node ./dist/consumer.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,11 @@
   },
   "homepage": "https://github.com/conduktor/kafka-stack-docker-compose#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "kafkajs": "^2.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2"
   }
 }

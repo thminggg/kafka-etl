@@ -17,6 +17,7 @@ docker build -t kafka-docker .
 ### Docker Compose
 
 ```bash
+# Reference: http://wurstmeister.github.io/kafka-docker/
 docker compose -f docker-compose.yml up -d
 ```
 
@@ -41,6 +42,12 @@ docker exec -it <kafka-container-id> /bin/bash
 
 ```bash
 /opt/kafka/bin/kafka-topics.sh --list --zookeeper zookeeper:2181
+```
+
+### Get partition count of topic
+
+```bash
+/opt/kafka/bin/kafka-topics.sh --describe --zookeeper zookeeper:2181 --topic test-topic
 ```
 
 ## Step 2: Producer & Consumer
