@@ -31,11 +31,12 @@ docker ps
 docker exec -it <kafka-container-id> /bin/bash
 ```
 
-### Create Topic
+### Create Topic (Optional)
 
 ```bash
-# Create kafka topic with name `test-topic`
-/opt/kafka/bin/kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic test-topic
+# Create kafka topic with name "test-topic-2"
+# Create in kafka-docker terminal
+/opt/kafka/bin/kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic test-topic-2
 ```
 
 ### List topic
@@ -56,6 +57,13 @@ docker exec -it <kafka-container-id> /bin/bash
 
 ```bash
 yarn
+```
+
+### Create Topic
+
+```bash
+# Create kafka topic with name "test-topic"
+yarn run topic:create
 ```
 
 ### Run Consumer
