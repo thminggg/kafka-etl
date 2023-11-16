@@ -1,4 +1,4 @@
-import kafka from "./services/kafka";
+import kafka from "./kafka";
 
 const createTopic = async () => {
   const admin = kafka.admin();

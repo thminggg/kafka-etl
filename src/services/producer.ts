@@ -1,5 +1,5 @@
-import kafka from "./services/kafka";
-import { Partitioners, PartitionerArgs } from "kafkajs";
+import { PartitionerArgs } from "kafkajs";
+import kafka from "./kafka";
 
 const CustomPartitioner = () => {
   return ({ topic, partitionMetadata, message }: PartitionerArgs) => {
@@ -12,7 +12,7 @@ const CustomPartitioner = () => {
   };
 };
 
-const produce = async () => {
+export const produce = async () => {
   const producer = kafka.producer({
     createPartitioner: CustomPartitioner,
   });

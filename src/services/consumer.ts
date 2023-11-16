@@ -1,4 +1,4 @@
-import kafka from "./services/kafka";
+import kafka from "./kafka";
 
 const consume = async () => {
   const consumer = kafka.consumer({ groupId: "test-group" });
