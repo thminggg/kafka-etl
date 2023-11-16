@@ -7,9 +7,9 @@
     "clean": "rm -rf dist",
     "compile": "yarn run clean && tsc",
     "kafka": "docker compose -f docker-compose.yml up -d",
-    "topic:create": "node ./dist/create-topic.js",
-    "produce": "node ./dist/producer.js",
-    "consume": "node ./dist/consumer.js"
+    "topic:create": "yarn run compile && node ./dist/create-topic.js",
+    "produce": "yarn run compile && node ./dist/producer.js",
+    "consume": "yarn run compile && node ./dist/consumer.js"
   },
   "repository": {
     "type": "git",
