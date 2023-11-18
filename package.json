@@ -1,30 +1,17 @@
 {
   "name": "kafka-etl",
-  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "clean": "rm -rf dist",
-    "compile": "yarn run clean && tsc",
-    "kafka": "docker compose -f docker-compose.yml up -d",
-    "topic:create": "yarn run compile && node ./dist/create-topic.js",
-    "produce": "yarn run compile && node ./dist/producer.js",
-    "consume": "yarn run compile && node ./dist/consumer.js",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "compile": "lerna run compile",
+    "dev": "lerna run dev"
   },
-  "author": "Patrick T",
-  "license": "MIT",
-  "dependencies": {
-    "dotenv": "^16.3.1",
-    "kafkajs": "^2.2.4",
-    "next": "^14.0.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "lerna": "^7.4.2",
     "@types/node": "^20.9.0",
-    "@types/react": "^18.2.37",
     "typescript": "^5.2.2"
   }
 }
