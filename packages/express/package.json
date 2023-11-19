@@ -10,7 +10,7 @@
     "dev": "yarn && yarn run compile && node ./dist/index.js"
   },
   "dependencies": {
-    "@thminggg/kafka": "file:../kafka/dist",
+    "@thminggg/kafka": "^1.0.0",
     "cors": "^2.8.5",
     "express": "^4.18.2"
   },
