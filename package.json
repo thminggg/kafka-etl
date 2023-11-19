@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "compile": "lerna run compile",
-    "dev": "lerna run dev"
+    "dev": "yarn run compile && lerna run dev"
   },
   "dependencies": {},
   "devDependencies": {

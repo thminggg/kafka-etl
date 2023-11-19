@@ -23,5 +23,3 @@ export const produce = async () => {
   });
   await producer.disconnect();
 };
-
-produce();

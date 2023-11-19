@@ -1,13 +1,13 @@
 {
   "name": "@thminggg/kafka",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "author": "Patrick T",
   "scripts": {
     "clean": "rm -rf ./dist",
     "compile": "yarn run clean && tsc",
-    "kafka": "docker compose -f docker-compose.yml up -d",
+    "dev": "docker compose -f docker-compose.yml up -d",
     "topic:create": "yarn run compile && node ./dist/create-topic.js",
     "produce": "yarn run compile && node ./dist/producer.js",
     "consume": "yarn run compile && node ./dist/consumer.js"
@@ -15,5 +15,6 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "kafkajs": "^2.2.4"
-  }
+  },
+  "types": "@types/index.d.ts"
 }

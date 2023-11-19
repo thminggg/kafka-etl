@@ -1,6 +1,6 @@
 import kafka from "./kafka";
 
-const consume = async () => {
+export const consume = async () => {
   const consumer = kafka.consumer({ groupId: "test-group" });
   await consumer.connect();
   await consumer.subscribe({ topic: "test-topic", fromBeginning: true });
@@ -12,5 +12,3 @@ const consume = async () => {
     },
   });
 };
-
-consume();

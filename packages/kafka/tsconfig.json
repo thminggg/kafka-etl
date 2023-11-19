@@ -9,11 +9,5 @@
     "allowJs": true,
     "esModuleInterop": true
   },
-  "include": [
-    "*.ts",
-    "src/consumer.ts",
-    "src/create-topic.ts",
-    "src/kafka.ts",
-    "src/producer.ts"
-  ]
+  "include": ["src/**/*.ts"]
 }

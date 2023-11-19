@@ -1,6 +1,6 @@
 import kafka from "./kafka";
 
-const createTopic = async () => {
+export const createTopic = async () => {
   const admin = kafka.admin();
   await admin.connect();
   await admin.createTopics({
@@ -16,5 +16,3 @@ const createTopic = async () => {
   });
   await admin.disconnect();
 };
-
-createTopic();
