@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "compile": "yarn run clean && tsc",
-    "dev": "yarn && yarn run compile && node ./dist/index.js"
+    "dev": "yarn && node ./dist/index.js"
   },
   "dependencies": {
     "@thminggg/kafka": "^1.0.0",

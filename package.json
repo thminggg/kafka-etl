@@ -5,14 +5,13 @@
     "packages/*"
   ],
   "scripts": {
-    "compile": "lerna run compile",
-    "dev": "yarn run compile && lerna run dev",
-    "consume": "lerna run consume"
+    "dev": "lerna run compile && concurrently \"lerna run dev\" \"lerna run consume\""
   },
   "dependencies": {},
   "devDependencies": {
-    "lerna": "^7.4.2",
     "@types/node": "^20.9.0",
+    "concurrently": "^8.2.2",
+    "lerna": "^7.4.2",
     "typescript": "^5.2.2"
   }
 }

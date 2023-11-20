@@ -8,9 +8,7 @@
     "clean": "rm -rf ./dist",
     "compile": "yarn run clean && tsc",
     "dev": "docker compose -f docker-compose.yml up -d",
-    "topic:create": "yarn run compile && node ./dist/create-topic.js",
-    "produce": "yarn run compile && node ./dist/producer.js",
-    "consume": "yarn run compile && node ./dist/consumer.js"
+    "consume": "node ./dist/consumer.js"
   },
   "dependencies": {
     "dotenv": "^16.3.1",

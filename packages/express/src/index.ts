@@ -4,7 +4,7 @@ import "dotenv/config";
 import express from "express";
 
 const main = async () => {
-  const PORT = 9000;
+  const PORT = process.env.EXPRESS_PORT;
   const app = express();
   app.use(cors(), express.json());
 
@@ -18,7 +18,7 @@ const main = async () => {
   });
 
   app.listen({ port: PORT }, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${process.env.HOST}:${PORT}`);
   });
 };
 
