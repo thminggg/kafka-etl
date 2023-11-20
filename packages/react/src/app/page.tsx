@@ -1,8 +1,9 @@
 "use client";
+import { produce } from "../services/kafka";
 
 export default function Page() {
   async function handleProduce() {
-    // TODO: call expressjs to produce in Kafka
+    await produce();
     console.log("produce in kafka");
   }
 
