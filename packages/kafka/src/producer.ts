@@ -3,10 +3,6 @@ import kafka from "./kafka";
 
 const CustomPartitioner = () => {
   return ({ topic, partitionMetadata, message }: PartitionerArgs) => {
-    console.log(topic);
-    console.log(partitionMetadata);
-    console.log(message);
-
     // return the partition number
     return 0;
   };
