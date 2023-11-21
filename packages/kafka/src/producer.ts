@@ -15,7 +15,7 @@ export const produce = async () => {
   await producer.connect();
   await producer.send({
     topic: "test-topic",
-    messages: [{ value: "Hello KafkaJS user!" }],
+    messages: [{ value: "Producer: Produced message to Kafka" }],
   });
   await producer.disconnect();
 };
