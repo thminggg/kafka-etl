@@ -1,6 +1,8 @@
-# Get Started
+# Kafka
 
-## Step 1: Kafka
+This `README.md` documents how to perform basic actions of the kafka when it runs by itself
+
+## Setup Kafka & Zookeeper
 
 Set up Kafka and Zookeeper running in local docker containers
 
@@ -31,7 +33,7 @@ docker ps
 docker exec -it <kafka-container-id> /bin/bash
 ```
 
-### Create Topic (Optional)
+### Create Topic
 
 ```bash
 # Create kafka topic with name "test-topic-2"
@@ -51,35 +53,15 @@ docker exec -it <kafka-container-id> /bin/bash
 /opt/kafka/bin/kafka-topics.sh --describe --zookeeper zookeeper:2181 --topic test-topic
 ```
 
-## Step 2: Producer & Consumer
-
-### Install Packages
-
-```bash
-yarn
-```
-
-### Create Topic
-
-```bash
-# Create kafka topic with name "test-topic"
-yarn run topic:create
-```
-
-### Run Consumer
+## Consumer
 
 Open a terminal and run
 
 ```bash
-yarn run produce
-```
-
-### Run Consumer
-
-Open **another terminal** and run
-
-```bash
 yarn run consume
-# Take seconds to for consumer to make initial connection to kafka
-# Output: { value: 'Hello KafkaJS user!' }
+# Take seconds to for consumer to initiate connection to kafka
 ```
+
+## Producer
+
+Reference the file `src/producer.ts` and call `produce()` in a main program
