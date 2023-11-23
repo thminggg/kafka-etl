@@ -1,0 +1,39 @@
+body {
+  max-width: 75vw;
+  padding-top: 35vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1vw;
+}
+
+.item {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20vw;
+}
+
+img {
+  max-width: inherit;
+  height: auto;
+}
+
+.producer {
+  cursor: pointer;
+}
+
+.cargoContainer {
+  justify-content: center;
+}
+
+.cargoImg {
+  max-width: 10vw;
+  height: auto;
+}
