@@ -5,8 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "chmod +x ./scripts/dev.sh && ./scripts/dev.sh",
-    "start": "lerna run compile && concurrently \"lerna run dev\" \"lerna run consume\""
+    "start": "chmod +x ./scripts/start.sh && ./scripts/start.sh"
   },
   "dependencies": {},
   "devDependencies": {
