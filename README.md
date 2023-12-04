@@ -1,6 +1,11 @@
 ## Kafka ETL
 
-This is a mono-repository of a backend server proceses messages from Kafka to perform ETL task with a frontend web app to visualize the process.
+This is a `mono-repository` of a `backend server` proceses messages from `Kafka` to perform ETL task with a frontend web app to visualize the process.
+
+## Demo
+
+![Demo](assets/kafka-etl-demo.gif)
+[![Demo Video](assets/kafka-etl-thumbnail.png)](assets/kafka-etl-demo.mp4)
 
 ## Getting Started
 
