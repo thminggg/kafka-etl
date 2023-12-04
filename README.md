@@ -3,9 +3,7 @@
 This is a `mono-repository` of a `backend server` proceses messages from `Kafka` to perform ETL task with a frontend web app to visualize the process.
 
 ## Demo
-
-![Demo](assets/kafka-etl-demo.gif)
-[![Demo Video](assets/kafka-etl-thumbnail.png)](assets/kafka-etl-demo.mp4)
+https://github.com/thminggg/kafka-etl/assets/17175914/c7e29b7c-3986-4621-add3-1ad9017758a0
 
 ## Getting Started
 
